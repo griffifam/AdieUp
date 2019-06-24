@@ -17,5 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('adieup.urls')),
+    path('', include('frontend.urls')),
+    path('', include('adieup.urls'))
 ]
