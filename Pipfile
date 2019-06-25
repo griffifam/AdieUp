@@ -12,7 +12,6 @@ pygments = "*"
 django-rest-knox = "*"
 psycopg2-binary = "*"
 django-environ = "*"
-coverage = "*"
 pytest-django = "*"
 
 [requires]
