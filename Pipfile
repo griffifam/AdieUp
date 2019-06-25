@@ -12,6 +12,7 @@ pygments = "*"
 django-rest-knox = "*"
 psycopg2-binary = "*"
 django-environ = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.7"
