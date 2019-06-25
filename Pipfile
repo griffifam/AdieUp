@@ -13,6 +13,8 @@ django-rest-knox = "*"
 psycopg2-binary = "*"
 django-environ = "*"
 pytest-django = "*"
+pytest-cov = "*"
+mixer = "*"
 
 [requires]
 python_version = "3.7"

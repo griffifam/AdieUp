@@ -14,7 +14,7 @@ class Adie(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return 'cohort: %s,\nAge: %s,\nGender: %s,\nRace: %s,\nSexual Orientation: %s,\nTransplant?: %s,\nLocation: %s, %s' % (self.cohort, self.age, self.gender, self.race, self.orientation, self.transplant, self.city, self.state)
+        return 'cohort: %s,\nId #: %s' % (self.cohort, self.id)
 
 class Company(models.Model):
     startup = models.BooleanField(default=False)
@@ -25,7 +25,7 @@ class Company(models.Model):
     adies_present = models.BooleanField(default=False)
 
     def __str__(self):
-        return '\nStartup?: %s,\nOrg Size: %s,\nLocation: %s,  %s\nIndustry: %s,\nAdies Present?: %s' % (self.startup, self.org_size, self.city, self.state, self.industry, self.adies_present)
+        return '\nIndustry: %s,\nLocation: %s,  %s' % (self.industry, self.city, self.state)
 
 class Offer(models.Model):
     adie = models.ForeignKey(Adie, on_delete=models.CASCADE)
@@ -40,4 +40,4 @@ class Offer(models.Model):
     created_at = created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '\nAdie: %s,\nCompany: %s,\nBase Pay: %s,\nAny Negotiations?: %s,\nSigning Bonus: %s,\nHealth Insurance?: %s,\n # of Vacation Days: %s,\nRetirement?: %s,\nRelocation Compensation?: %s' % (self.adie_id, self.company_id, self.base_amount, self.negotiations, self.signing_bonus, self.health_insurance, self.vacation_days, self.retirement, self.relocation_package)
+        return '\nAdie: %s,\nCompany: %s,\nBase Pay: %s' % (self.adie_id, self.company_id, self.base_amount)
