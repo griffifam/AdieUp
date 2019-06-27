@@ -15,6 +15,7 @@ django-environ = "*"
 pytest-django = "*"
 pytest-cov = "*"
 mixer = "*"
+pdb = "*"
 
 [requires]
 python_version = "3.7"

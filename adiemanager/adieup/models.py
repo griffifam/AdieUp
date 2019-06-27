@@ -10,7 +10,6 @@ class Adie(models.Model):
     transplant = models.BooleanField(default=False)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
-    cohort = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

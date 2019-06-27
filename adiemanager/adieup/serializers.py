@@ -5,6 +5,7 @@ class AdieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Adie
         fields = '__all__'
+        read_only_fields = ['created_at']
 
 class CompanySerializer(serializers.ModelSerializer):
         class Meta:
@@ -15,3 +16,4 @@ class OfferSerializer(serializers.ModelSerializer):
         class Meta:
             model = Offer
             fields = '__all__'
+            read_only_fields = ['created_at']

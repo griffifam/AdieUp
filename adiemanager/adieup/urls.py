@@ -1,10 +1,10 @@
-from rest_framework import routers
+from rest_framework.routers import DefaultRouter
 from .api import AdieViewSet, CompanyViewSet, OfferViewSet
 
-router = routers.DefaultRouter()
-router.register('api/adies', AdieViewSet, 'adies')
-router.register('api/companies', CompanyViewSet, 'companies')
-router.register('api/offers', OfferViewSet, 'offers')
+router = DefaultRouter()
+router.register(r'api/adies', AdieViewSet, basename='adies')
+router.register(r'api/companies', CompanyViewSet, basename='companies')
+router.register(r'api/offers', OfferViewSet, basename='offers')
 
 
 urlpatterns = router.urls
