@@ -13,7 +13,7 @@ class Adie(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return 'cohort: %s,\nId #: %s' % (self.cohort, self.id)
+        return "Adie ID: " + '%s' % (self.id)
 
 class Company(models.Model):
     startup = models.BooleanField(default=False)
@@ -24,7 +24,7 @@ class Company(models.Model):
     adies_present = models.BooleanField(default=False)
 
     def __str__(self):
-        return '\nIndustry: %s,\nLocation: %s,  %s' % (self.industry, self.city, self.state)
+        return 'Industry: %s - %s,  %s' % (self.industry, self.city, self.state)
 
 class Offer(models.Model):
     adie = models.ForeignKey(Adie, on_delete=models.CASCADE)
@@ -39,4 +39,4 @@ class Offer(models.Model):
     created_at = created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return '\nAdie: %s,\nCompany: %s,\nBase Pay: %s' % (self.adie_id, self.company_id, self.base_amount)
+        return 'Adie: %s,\nCompany: %s,\nBase Pay: %s' % (self.adie_id, self.company_id, self.base_amount)
