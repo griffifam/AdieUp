@@ -3,7 +3,7 @@ from django.urls import reverse
 from rest_framework.test import APIRequestFactory, APITestCase, APIClient
 from adieup.api import AdieViewSet, CompanyViewSet, OfferViewSet
 from adieup.models import Adie, Company, Offer
-import pdb
+# import pdb
 
 
 class AdieAPIRequestFactory(APITestCase):
